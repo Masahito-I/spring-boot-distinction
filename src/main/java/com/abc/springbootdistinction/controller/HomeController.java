@@ -1,6 +1,7 @@
 package com.abc.springbootdistinction.controller;
 
 import com.abc.springbootdistinction.model.Inquiry;
+import com.abc.springbootdistinction.model.Invoice;
 import com.abc.springbootdistinction.model.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -24,17 +25,32 @@ public class HomeController {
 //        return "confirm";
 //    }
 
+//    @GetMapping("/")
+//    public String index(@ModelAttribute Inquiry inquiry) {
+//        return "index";
+//    }
+
+//    @PostMapping("/")
+//    public String confirm(@Validated @ModelAttribute Inquiry inquiry,
+//                          BindingResult result) {
+//        if (result.hasErrors()) {
+//            return "index";
+//        }
+//        return "confirm";
+//    }
+
+    // custome error message
     @GetMapping("/")
-    public String index(@ModelAttribute Inquiry inquiry) {
-        return "index";
+    public String index2(@ModelAttribute Invoice invoice) {
+        return "index2";
     }
 
     @PostMapping("/")
-    public String confirm(@Validated @ModelAttribute Inquiry inquiry,
+    public String confirm2(@Validated @ModelAttribute Invoice invoice,
                           BindingResult result) {
         if (result.hasErrors()) {
-            return "index";
+            return "index2";
         }
-        return "confirm";
+        return "confirm2";
     }
 }
