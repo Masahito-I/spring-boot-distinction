@@ -20,14 +20,14 @@ public class HelloController {
         return "hello";
     }
 
-    @GetMapping("/form")
-    public String form() {
-        return "form";
-    }
+//    @GetMapping("/form")
+//    public String form() {
+//        return "form";
+//    }
 
-    @PostMapping("/confirm")
-    public String confirm(@RequestParam String message, Model model) {
-        model.addAttribute("message", message);
-        return "confirm";
-    }
+//    @PostMapping("/confirm")
+//    public String confirm(@RequestParam String message, Model model) {
+//        model.addAttribute("message", message);
+//        return "confirm";
+//    }
 }
